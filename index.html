@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title></title>
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	<style type="text/css">
+		.star-mark, .face-mark{
+			position: relative;
+		}
+		.afterImg{
+			position: absolute;
+			top: 0;
+		}
+		.star-img{
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+		}
+		.star-img img{
+			height: 100%;
+		}
+	</style>
+  </head>
+  <body>
+    <div>
+    	<div class="star-mark"></div>
+    	<div class="face-mark"></div>
+    </div>
+    <script type="text/javascript">
+    	new ScoreMark('.star-mark', {
+    		beforImg: 'img/star_hollow.png',
+    		afterImg: 'img/star_solid.png',
+            isDecimal: false,//选择的是否是小数的
+    		count: 6,//总共
+    		level: 0//当前显示
+    	})
+
+    	new ScoreMark('.face-mark', {
+    		beforImg: 'img/face_hollow.png',
+    		afterImg: 'img/face_solid.png',
+            isDecimal: true,
+    		count: 5,
+    		level: 3.4
+    	})
+    </script>
+
+
+  </body>
+</html>
